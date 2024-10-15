@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@alfabit-alura/button": ["libs/ui/button/src/index.ts"],
-      "@alfabit-alura/input": ["libs/ui/input/src/index.ts"],
+      "@alfabit-alura-teste/button": ["libs/ui/button/src/index.ts"],
+      "@alfabit-alura-teste/input": ["libs/ui/input/src/index.ts"],
       "@alfabit/ds-storybook": ["libs/storybook-host/src/index.ts"]
     }
   },
