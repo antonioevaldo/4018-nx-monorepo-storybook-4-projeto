@@ -1,19 +1,12 @@
 import {
   Component,
-  ContentChild,
-  Directive,
   Input,
+  OnInit,
   TemplateRef,
+  ViewChild,
+  ViewContainerRef,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-@Directive({
-  selector: '[abContainerContent]',
-  standalone: true,
-})
-export class ContainerContentDirective {
-  constructor(public templateRef: TemplateRef<unknown>) {}
-}
 
 type Text =
   | 'title1'
@@ -35,36 +28,119 @@ type Size =
   | 'xs';
 
 @Component({
-  selector: 'ab-inner-typography',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './typography.component.html',
   styleUrl: './typography.component.css',
+  template: `
+    <h1 class="typography {{ this.size }}">
+      <ng-content />
+    </h1>
+  `,
 })
-export class InnerTypographyComponent {
-  @Input() type!: Text;
+class H1Component {
   @Input() size!: Size;
+}
 
-  @ContentChild(ContainerContentDirective) content!: ContainerContentDirective;
+@Component({
+  standalone: true,
+  styleUrl: './typography.component.css',
+  template: `
+    <h2 class="typography {{ this.size }}">
+      <ng-content />
+    </h2>
+  `,
+})
+class H2Component {
+  @Input() size!: Size;
+}
 
-  getClasses(): string {
-    return `typography ${this.size}`;
-  }
+@Component({
+  standalone: true,
+  styleUrl: './typography.component.css',
+  template: `
+    <h3 class="typography {{ this.size }}">
+      <ng-content />
+    </h3>
+  `,
+})
+class H3Component {
+  @Input() size!: Size;
+}
+
+@Component({
+  standalone: true,
+  styleUrl: './typography.component.css',
+  template: `
+    <h4 class="typography {{ this.size }}">
+      <ng-content />
+    </h4>
+  `,
+})
+class H4Component {
+  @Input() size!: Size;
+}
+
+@Component({
+  standalone: true,
+  styleUrl: './typography.component.css',
+  template: `
+    <h5 class="typography {{ this.size }}">
+      <ng-content />
+    </h5>
+  `,
+})
+class H5Component {
+  @Input() size!: Size;
+}
+
+@Component({
+  standalone: true,
+  styleUrl: './typography.component.css',
+  template: `
+    <span class="typography {{ this.size }}">
+      <ng-content />
+    </span>
+  `,
+})
+class SpanComponent {
+  @Input() size!: Size;
 }
 
 @Component({
   selector: 'ab-typography',
   standalone: true,
-  imports: [CommonModule, InnerTypographyComponent, ContainerContentDirective],
-  template: `
-    <ab-inner-typography [type]="type" [size]="size">
-      <ng-template abContainerContent>
-        <ng-content></ng-content>
-      </ng-template>
-    </ab-inner-typography>
-  `,
+  imports: [CommonModule],
+  templateUrl: './typography.component.html',
 })
-export class TypographyComponent {
+export class TypographyComponent implements OnInit {
   @Input() type: Text = 'normal';
   @Input() size!: Size;
+
+  @ViewChild('template', { static: true })
+  template!: TemplateRef<unknown>;
+
+  Component: any;
+  dynamicComponentContent!: any[][];
+
+  get inputs() {
+    return { size: this.size };
+  }
+
+  private componentsMap: { [key in Text]: any } = {
+    title1: H1Component,
+    title2: H2Component,
+    title3: H3Component,
+    subtitle1: H4Component,
+    subtitle2: H5Component,
+    normal: SpanComponent,
+  };
+
+  constructor(private viewContainerRef: ViewContainerRef) {}
+
+  ngOnInit(): void {
+    this.Component = this.componentsMap[this.type];
+
+    this.dynamicComponentContent = [
+      this.viewContainerRef.createEmbeddedView(this.template).rootNodes,
+    ];
+  }
 }
