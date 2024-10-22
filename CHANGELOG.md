@@ -1,3 +1,14 @@
+## 2.0.1 (2024-10-22)
+
+
+### 🩹 Fixes
+
+- **typography:** configura acesso público ([fd583e6](https://github.com/antonio-evaldo/4017-nx-monorepo-storybook-3/commit/fd583e6))
+
+### ❤️  Thank You
+
+- Antônio Evaldo @antonio-evaldo
+
 # 2.0.0 (2024-10-22)
 
 
