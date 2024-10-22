@@ -12,10 +12,6 @@ type Theme = 'blue' | 'violet';
   styleUrl: './button.component.css',
 })
 export class ButtonComponent {
-  /**
-   * Texto do botão.
-   */
-  @Input() text = '';
   @Input() variant: Variant = 'primary';
   @Input() disabled = false;
   @Input() theme: Theme = 'blue';

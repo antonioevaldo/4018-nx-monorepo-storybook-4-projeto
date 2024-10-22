@@ -1,8 +1,16 @@
-import type { Meta, StoryObj } from '@storybook/angular';
+import { argsToTemplate, type Meta, type StoryObj } from '@storybook/angular';
 import { ButtonComponent } from '@alfabit-alura-teste/button';
 
 const meta: Meta<ButtonComponent> = {
   component: ButtonComponent,
+  render: (args) => ({
+    props: args,
+    template: `
+      <ab-button ${argsToTemplate(args)}>
+        Action
+      </ab-button>
+    `,
+  }),
 };
 
 export default meta;
@@ -11,7 +19,6 @@ type Story = StoryObj<ButtonComponent>;
 
 export const PrimaryButton: Story = {
   args: {
-    text: 'Action',
     variant: 'primary',
     disabled: false,
     theme: 'blue',
