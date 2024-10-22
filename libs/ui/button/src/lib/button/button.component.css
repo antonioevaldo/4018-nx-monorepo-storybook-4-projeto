@@ -4,10 +4,7 @@ button {
   padding: 0.75rem 2rem 0.75rem 2rem;
   border-radius: var(--ab-border-radius-botao, 0.5rem);
   border: none;
-  font-family: sans-serif;
-  font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 1.5rem;
+  font-weight: var(--ab-button-font-weight, 700);
   letter-spacing: 0.02em;
   text-align: center;
   transition: color 0.3s, background-color 0.3s;
