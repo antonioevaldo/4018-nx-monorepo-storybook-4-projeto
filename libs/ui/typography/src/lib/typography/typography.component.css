@@ -1,7 +1,5 @@
 .typography {
   font-family: var(--ab-font-family, sans-serif);
-  font-optical-sizing: auto;
-  font-style: normal;
   margin: 0;
 }
 
@@ -35,26 +33,23 @@ h5,
   line-height: 1.875rem;
 }
 
+span,
 .lg {
   font-size: 1.125rem;
   line-height: 1.5rem;
-  font-weight: 400;
 }
 
 .md {
   font-size: 1rem;
   line-height: 1.25rem;
-  font-weight: 400;
 }
 
 .sm {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  font-weight: 400;
 }
 
 .xs {
   font-size: 0.75rem;
   line-height: 1rem;
-  font-weight: 400;
 }

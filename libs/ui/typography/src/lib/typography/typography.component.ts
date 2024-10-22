@@ -27,6 +27,18 @@ type Size =
   | 'sm'
   | 'xs';
 
+type ComponentsMap = {
+  [key in Text]:
+    | typeof H1Component
+    | typeof H2Component
+    | typeof H3Component
+    | typeof H4Component
+    | typeof H5Component
+    | typeof SpanComponent;
+};
+
+type DynamicComponent = ComponentsMap[keyof ComponentsMap];
+
 @Component({
   standalone: true,
   styleUrl: './typography.component.css',
@@ -118,21 +130,22 @@ export class TypographyComponent implements OnInit {
   @ViewChild('template', { static: true })
   template!: TemplateRef<unknown>;
 
-  Component: any;
+  Component!: DynamicComponent;
+
   dynamicComponentContent!: any[][];
 
   get inputs() {
     return { size: this.size };
   }
 
-  private componentsMap: { [key in Text]: any } = {
+  private componentsMap = {
     title1: H1Component,
     title2: H2Component,
     title3: H3Component,
     subtitle1: H4Component,
     subtitle2: H5Component,
     normal: SpanComponent,
-  };
+  } satisfies ComponentsMap;
 
   constructor(private viewContainerRef: ViewContainerRef) {}
 
