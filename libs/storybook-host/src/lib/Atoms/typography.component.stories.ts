@@ -97,7 +97,7 @@ export const Paragraph: Story = {
     template: `
       <p>
         <ab-typography ${argsToTemplate(args)}>
-          Primeiro parágrafo
+          Texto do parágrafo
         </ab-typography>
       </p>
     `,
