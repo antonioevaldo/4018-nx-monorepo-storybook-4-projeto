@@ -1,3 +1,14 @@
+## 2.0.2 (2024-10-23)
+
+
+### 🩹 Fixes
+
+- **button:** adiciona `typography` em `dependencies` ([c7364cc](https://github.com/antonio-evaldo/4017-nx-monorepo-storybook-3/commit/c7364cc))
+
+### ❤️  Thank You
+
+- Antônio Evaldo @antonio-evaldo
+
 ## 2.0.1 (2024-10-22)
 
 
