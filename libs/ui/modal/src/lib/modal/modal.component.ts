@@ -1,9 +1,10 @@
 import {
+  AfterViewChecked,
   Component,
-  effect,
   ElementRef,
-  input,
+  EventEmitter,
   Input,
+  Output,
   ViewChild,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -16,28 +17,22 @@ import { TypographyComponent } from '@alfabit-alura-teste/typography';
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.css',
 })
-export class ModalComponent {
-  @Input() title = 'Heading';
-  isOpen = input(false);
+export class ModalComponent implements AfterViewChecked {
+  @Input() modalTitle = '';
+  @Input() isOpen = false;
+  @Output() closed = new EventEmitter();
 
   @ViewChild('modal') modal!: ElementRef<HTMLDialogElement>;
 
-  constructor() {
-    effect(() => {
-      if (this.isOpen()) {
-        this.modal.nativeElement.showModal();
-      } else {
-        this.modal.nativeElement.close();
-      }
-    });
-  }
-
-  openModal() {
-    this.modal.nativeElement.showModal();
+  ngAfterViewChecked(): void {
+    if (this.isOpen) {
+      this.modal.nativeElement.showModal();
+    } else {
+      this.modal.nativeElement.close();
+    }
   }
 
   closeModal() {
-    // this.modal.nativeElement.close();
-    // this.isOpen = false;
+    this.closed.emit();
   }
 }
