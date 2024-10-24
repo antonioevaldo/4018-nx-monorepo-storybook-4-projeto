@@ -1,7 +1,8 @@
 import {
-  AfterViewInit,
   Component,
+  effect,
   ElementRef,
+  input,
   Input,
   ViewChild,
 } from '@angular/core';
@@ -15,13 +16,20 @@ import { TypographyComponent } from '@alfabit-alura-teste/typography';
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.css',
 })
-export class ModalComponent implements AfterViewInit {
+export class ModalComponent {
   @Input() title = 'Heading';
+  isOpen = input(false);
 
   @ViewChild('modal') modal!: ElementRef<HTMLDialogElement>;
 
-  ngAfterViewInit(): void {
-    this.modal.nativeElement.showModal();
+  constructor() {
+    effect(() => {
+      if (this.isOpen()) {
+        this.modal.nativeElement.showModal();
+      } else {
+        this.modal.nativeElement.close();
+      }
+    });
   }
 
   openModal() {
@@ -29,6 +37,7 @@ export class ModalComponent implements AfterViewInit {
   }
 
   closeModal() {
-    this.modal.nativeElement.close();
+    // this.modal.nativeElement.close();
+    // this.isOpen = false;
   }
 }
