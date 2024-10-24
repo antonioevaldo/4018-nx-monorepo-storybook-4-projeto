@@ -3,5 +3,6 @@
   "dest": "../../../dist/libs/ui/modal",
   "lib": {
     "entryFile": "src/index.ts"
-  }
+  },
+  "allowedNonPeerDependencies": ["@alfabit-alura-teste/*"]
 }
