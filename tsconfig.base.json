@@ -17,6 +17,7 @@
     "paths": {
       "@alfabit-alura-teste/button": ["libs/ui/button/src/index.ts"],
       "@alfabit-alura-teste/input": ["libs/ui/input/src/index.ts"],
+      "@alfabit-alura-teste/modal": ["libs/ui/modal/src/index.ts"],
       "@alfabit-alura-teste/typography": ["libs/ui/typography/src/index.ts"],
       "@alfabit/ds-storybook": ["libs/storybook-host/src/index.ts"]
     }
