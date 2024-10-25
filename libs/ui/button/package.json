@@ -1,12 +1,12 @@
 {
   "name": "@alfabit-alura-teste/button",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0"
   },
   "dependencies": {
-    "@alfabit-alura-teste/typography": "2.0.2",
+    "@alfabit-alura-teste/typography": "2.1.0",
     "tslib": "^2.3.0"
   },
   "sideEffects": false,

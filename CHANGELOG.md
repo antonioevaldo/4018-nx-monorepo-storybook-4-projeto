@@ -1,3 +1,27 @@
+## 2.1.0 (2024-10-25)
+
+
+### 🚀 Features
+
+- **modal:** cria arquivo de story ([aed79aa](https://github.com/antonio-evaldo/4017-nx-monorepo-storybook-3/commit/aed79aa))
+- **modal:** desenvolve modal ([c416d0b](https://github.com/antonio-evaldo/4017-nx-monorepo-storybook-3/commit/c416d0b))
+- **modal:** usa signal input para permitir o controle do modal ([a001d10](https://github.com/antonio-evaldo/4017-nx-monorepo-storybook-3/commit/a001d10))
+- **nx:** cria lib `modal` ([93a5716](https://github.com/antonio-evaldo/4017-nx-monorepo-storybook-3/commit/93a5716))
+- **nx:** melhora comando de publicação do chromatic com interpolação de args ([0a2a1f2](https://github.com/antonio-evaldo/4017-nx-monorepo-storybook-3/commit/0a2a1f2))
+- **storybook-host:** adiciona documentação MDX e ajusta args do Controls ([6c2a536](https://github.com/antonio-evaldo/4017-nx-monorepo-storybook-3/commit/6c2a536))
+
+### 🩹 Fixes
+
+- **modal:** utiliza ciclo de vida ([26157b6](https://github.com/antonio-evaldo/4017-nx-monorepo-storybook-3/commit/26157b6))
+- **modal:** adiciona configuração de acesso público ([c57bdc0](https://github.com/antonio-evaldo/4017-nx-monorepo-storybook-3/commit/c57bdc0))
+- **modal:** troca ordem dos stories ([1181022](https://github.com/antonio-evaldo/4017-nx-monorepo-storybook-3/commit/1181022))
+- **nx:** permite `peerDependencies` para os pacotes do DS ([ddb3468](https://github.com/antonio-evaldo/4017-nx-monorepo-storybook-3/commit/ddb3468))
+- **storybook-host:** refaz o story do modal para usar função `render` ([463a324](https://github.com/antonio-evaldo/4017-nx-monorepo-storybook-3/commit/463a324))
+
+### ❤️  Thank You
+
+- Antônio Evaldo @antonio-evaldo
+
 ## 2.0.2 (2024-10-23)
 
 
