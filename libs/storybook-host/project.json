@@ -78,7 +78,7 @@
     },
     "chromatic": {
       "dependsOn": ["build-storybook"],
-      "command": "chromatic --storybook-build-dir=dist/storybook/storybook-host"
+      "command": "chromatic --storybook-build-dir=dist/storybook/storybook-host --projectToken={args.token}"
     }
   }
 }
