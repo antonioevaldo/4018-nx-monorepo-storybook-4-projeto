@@ -1,0 +1,15 @@
+import { Meta, Source, Canvas, Primary } from '@storybook/blocks';
+
+import * as ModalStories from './modal.component.stories';
+
+<Meta of={ModalStories} />
+
+# Utilizando o componente de modal
+
+Segue um exemplo de código HTML para consumir o modal:
+
+<Canvas of={ModalStories.Closed} sourceState='shown' layout='fullscreen' />
+
+A abertura e fechamento do modal são controlados pelo Input `isOpen`.
+
+Depois que o modal for aberto, clicar no botão de fechamento (`X`) ou pressionar a tecla `Esc` irá emitir o evento `closed`. Você deve escutar esse evento para alterar o valor do Input `isOpen` para `false`.

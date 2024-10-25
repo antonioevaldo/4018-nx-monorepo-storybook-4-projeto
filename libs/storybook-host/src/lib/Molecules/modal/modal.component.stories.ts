@@ -29,6 +29,9 @@ const meta: Meta<ModalComponent> = {
       </ab-modal>
     `,
   }),
+  parameters: {
+    controls: { include: ['isOpen', 'modalTitle', 'closed'] },
+  },
 };
 
 export default meta;
