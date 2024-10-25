@@ -127,8 +127,7 @@ export class TypographyComponent implements OnInit {
   @Input() type: Text = 'normal';
   @Input() size!: Size;
 
-  @ViewChild('template', { static: true })
-  template!: TemplateRef<unknown>;
+  @ViewChild('template', { static: true }) template!: TemplateRef<unknown>;
 
   Component!: DynamicComponent;
 
