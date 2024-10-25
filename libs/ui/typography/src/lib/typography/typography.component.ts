@@ -151,8 +151,10 @@ export class TypographyComponent implements OnInit {
   ngOnInit(): void {
     this.Component = this.componentsMap[this.type];
 
-    this.dynamicComponentContent = [
-      this.viewContainerRef.createEmbeddedView(this.template).rootNodes,
-    ];
+    const templateContent = this.viewContainerRef.createEmbeddedView(
+      this.template
+    ).rootNodes;
+
+    this.dynamicComponentContent = [templateContent];
   }
 }
