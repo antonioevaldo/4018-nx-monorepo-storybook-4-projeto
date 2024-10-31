@@ -31,7 +31,10 @@
         "{workspaceRoot}/.eslintrc.json",
         "{workspaceRoot}/.eslintignore",
         "{workspaceRoot}/eslint.config.js"
-      ]
+      ],
+      "options": {
+        "fix": true
+      }
     },
     "@nx/jest:jest": {
       "cache": true,
