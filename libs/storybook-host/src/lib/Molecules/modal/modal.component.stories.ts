@@ -6,12 +6,13 @@ import {
 } from '@storybook/angular';
 import { ModalComponent } from '@alfabit-alura-teste/modal';
 import { TypographyComponent } from '@alfabit-alura-teste/typography';
+import { ButtonComponent } from '@alfabit-alura-teste/button';
 
 const meta: Meta<ModalComponent> = {
   component: ModalComponent,
   decorators: [
     moduleMetadata({
-      imports: [TypographyComponent],
+      imports: [TypographyComponent, ButtonComponent],
     }),
   ],
   render: (args) => ({
@@ -26,6 +27,10 @@ const meta: Meta<ModalComponent> = {
             user experience.
           </ab-typography>
         </p>
+
+        <ab-button>
+          Primary button
+        </ab-button>
       </ab-modal>
     `,
   }),
