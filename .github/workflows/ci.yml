@@ -32,4 +32,6 @@ jobs:
 
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
       # - run: npx nx-cloud record -- echo Hello World
-      - run: npx nx affected -t lint test build
+      - run: npx nx affected -t lint test --exclude=alfabit --base=projeto-base --head=HEAD
+      - run: npx nx affected -t build --exclude="alfabit,storybook-host" --base=projeto-base --head=HEAD
+      - run: npx nx run storybook-host:build-storybook
