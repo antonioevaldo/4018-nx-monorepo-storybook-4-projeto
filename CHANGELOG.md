@@ -1,3 +1,23 @@
+## 2.4.1 (2024-11-01)
+
+
+### 🚀 Features
+
+- **modal:** adiciona componente de botão no story ([c80a824](https://github.com/antonio-evaldo/4018-nx-monorepo-storybook-4-projeto/commit/c80a824))
+- **nx:** add basic ci workflow ([193c356](https://github.com/antonio-evaldo/4018-nx-monorepo-storybook-4-projeto/commit/193c356))
+- **nx-cloud:** setup nx cloud workspace ([77b32b0](https://github.com/antonio-evaldo/4018-nx-monorepo-storybook-4-projeto/commit/77b32b0))
+
+### 🩹 Fixes
+
+- **ci:** corrige comandos ([271a31d](https://github.com/antonio-evaldo/4018-nx-monorepo-storybook-4-projeto/commit/271a31d))
+- **ci:** troca `affected` para `run-many` ([a0aee4f](https://github.com/antonio-evaldo/4018-nx-monorepo-storybook-4-projeto/commit/a0aee4f))
+- **nx:** executa comandos de lint e test ([54e8c75](https://github.com/antonio-evaldo/4018-nx-monorepo-storybook-4-projeto/commit/54e8c75))
+- **storybook-host:** remove imports não utilizados ([584ee5e](https://github.com/antonio-evaldo/4018-nx-monorepo-storybook-4-projeto/commit/584ee5e))
+
+### ❤️  Thank You
+
+- Antônio Evaldo @antonio-evaldo
+
 ## 2.4.0 (2024-10-25)
 
 This was a version bump only, there were no code changes.
