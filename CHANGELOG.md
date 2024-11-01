@@ -1,3 +1,14 @@
+## 2.4.2 (2024-11-01)
+
+
+### 🩹 Fixes
+
+- **button:** retorna configuração de acesso público ([2f37b80](https://github.com/antonio-evaldo/4018-nx-monorepo-storybook-4-projeto/commit/2f37b80))
+
+### ❤️  Thank You
+
+- Antônio Evaldo @antonio-evaldo
+
 ## 2.4.1 (2024-11-01)
 
 
