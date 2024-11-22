@@ -31,10 +31,12 @@ jobs:
       - run: npm ci
 
       - uses: nrwl/nx-set-shas@v4
+        with:
+          main-branch-name: 'projeto-base'
 
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
       # - run: npx nx-cloud record -- echo Hello World
       - run: |
-          npx nx run-many -t lint test --exclude=alfabit
-          npx nx run-many -t build --exclude="alfabit,storybook-host"
-          npx nx run storybook-host:build-storybook
+          npx nx affected -t lint test --exclude=alfabit
+          npx nx affected -t build --exclude="alfabit,storybook-host"
+          npx nx affected -t build-storybook
