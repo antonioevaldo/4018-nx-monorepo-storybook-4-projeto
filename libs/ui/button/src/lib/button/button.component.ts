@@ -17,6 +17,9 @@ export class ButtonComponent {
    * Determina a variante do botão.
    */
   @Input() variant: Variant = 'primary';
+  /**
+   * Define se está desabilitado.
+   */
   @Input() disabled = false;
   @Input() theme: Theme = 'blue';
 
