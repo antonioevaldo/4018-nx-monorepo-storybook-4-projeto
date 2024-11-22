@@ -32,6 +32,7 @@ jobs:
 
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
       # - run: npx nx-cloud record -- echo Hello World
-      - run: npx nx run-many -t lint test --exclude=alfabit
-      - run: npx nx run-many -t build --exclude="alfabit,storybook-host"
-      - run: npx nx run storybook-host:build-storybook
+      - run: |
+          npx nx run-many -t lint test --exclude=alfabit
+          npx nx run-many -t build --exclude="alfabit,storybook-host"
+          npx nx run storybook-host:build-storybook
