@@ -36,6 +36,6 @@ jobs:
       # - run: npx nx-cloud record -- echo Hello World
       - name: Executa tarefas
         run: |
-          npx nx affected -t lint test --exclude=alfabit
-          npx nx affected -t build --exclude="alfabit,storybook-host"
-          npx nx affected -t build-storybook
+          npx nx run-many -t lint test --exclude=alfabit
+          npx nx run-many -t build --exclude="alfabit,storybook-host"
+          npx nx run storybook-host:build-storybook
