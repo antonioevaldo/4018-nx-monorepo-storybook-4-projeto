@@ -19,8 +19,10 @@ jobs:
       - name: Build Storybook
         run: npx nx run storybook-host:build-storybook:ci
       - name: Run Chromatic
-        uses: chromaui/action@latest
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          exitZeroOnChanges: true
-          storybookBuildDir: dist/storybook/storybook-host
+        run: npx nx run storybook-host:chromatic --token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --args="--exit-zero-on-changes"
+      # - name: Run Chromatic
+      #   uses: chromaui/action@latest
+      #   with:
+      #     projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+      #     exitZeroOnChanges: true
+      #     storybookBuildDir: dist/storybook/storybook-host
