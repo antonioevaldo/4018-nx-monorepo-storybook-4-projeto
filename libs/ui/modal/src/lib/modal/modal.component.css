@@ -5,7 +5,7 @@ dialog {
   border: 0;
   border-radius: 1rem;
   background: var(--ab-white, #fff);
-  padding: 2.5rem;
+  padding: 5rem;
 }
 
 header {
