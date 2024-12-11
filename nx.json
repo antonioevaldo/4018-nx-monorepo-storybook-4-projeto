@@ -74,6 +74,5 @@
   "release": {
     "projects": ["libs/ui/*"],
     "version": { "conventionalCommits": true }
-  },
-  "nxCloudAccessToken": "YjgyOWJjODUtMWU1OS00OTliLTg4NTItYzI5OTIxOWJkODRmfHJlYWQtd3JpdGU="
+  }
 }
