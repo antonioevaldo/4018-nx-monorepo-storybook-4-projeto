@@ -2,6 +2,9 @@ name: 'Chromatic'
 
 on: push
 
+env:
+  NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+
 jobs:
   chromatic:
     name: Run Chromatic
