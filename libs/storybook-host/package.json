@@ -1,6 +1,12 @@
 {
   "name": "@alfabit/ds-storybook",
   "version": "0.0.1",
+  "scripts": {
+    "chromatic": "chromatic"
+  },
+  "devDependencies": {
+    "chromatic": "^11.7.1"
+  },
   "peerDependencies": {},
   "dependencies": {},
   "sideEffects": false
