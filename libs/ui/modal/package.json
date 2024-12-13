@@ -1,12 +1,12 @@
 {
   "name": "@alfabit-alura-teste/modal",
-  "version": "2.4.2",
+  "version": "2.5.0",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0"
   },
   "dependencies": {
-    "@alfabit-alura-teste/typography": "2.4.2"
+    "@alfabit-alura-teste/typography": "2.5.0"
   },
   "sideEffects": false,
   "publishConfig": {

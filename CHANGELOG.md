@@ -1,3 +1,20 @@
+## 2.5.0 (2024-12-13)
+
+
+### 🚀 Features
+
+- **button:** adiciona JSDoc ([9d28bdc](https://github.com/antonioevaldo/4018-nx-monorepo-storybook-4-projeto/commit/9d28bdc))
+- **button:** adiciona JSDoc ([cdcd8a5](https://github.com/antonioevaldo/4018-nx-monorepo-storybook-4-projeto/commit/cdcd8a5))
+
+### 🩹 Fixes
+
+- **modal:** muda espaçamento ([1357559](https://github.com/antonioevaldo/4018-nx-monorepo-storybook-4-projeto/commit/1357559))
+- **modal:** corrige espaçamento ([181a8a5](https://github.com/antonioevaldo/4018-nx-monorepo-storybook-4-projeto/commit/181a8a5))
+
+### ❤️  Thank You
+
+- Antônio Evaldo @antonio-evaldo
+
 ## 2.4.2 (2024-11-01)
 
 
