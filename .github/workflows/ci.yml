@@ -15,6 +15,7 @@ env:
 
 jobs:
   main:
+    name: Test, lint and build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
