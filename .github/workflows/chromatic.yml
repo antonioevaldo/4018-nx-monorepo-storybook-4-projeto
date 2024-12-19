@@ -20,11 +20,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build Storybook
-        run: npx nx run storybook-host:build-storybook:ci
+        run: npx nx affected -t build-storybook --configuration=ci
       - name: Run Chromatic
-        uses: chromaui/action@latest
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          storybookBuildDir: dist/storybook/storybook-host
-          exitZeroOnChanges: true
-          exitOnceUploaded: true
+        env:
+          PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+        run: npx nx affected -t chromatic-ci --token="$PROJECT_TOKEN"
+      # - name: Run Chromatic
+      #   uses: chromaui/action@latest
+      #   with:
+      #     projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+      #     storybookBuildDir: dist/storybook/storybook-host
+      #     exitZeroOnChanges: true
+      #     exitOnceUploaded: true

@@ -4,6 +4,8 @@ on:
   push:
     tags:
       - v*.*.*
+    branches:
+      - main
 
 env:
   NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
@@ -36,7 +38,7 @@ jobs:
         shell: bash
 
       - name: Publish packages
-        run: npx nx release publish
+        run: npx nx release publish --skip-nx-cache
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
