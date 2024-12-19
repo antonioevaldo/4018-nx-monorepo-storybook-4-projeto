@@ -14,17 +14,23 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
       - name: Install dependencies
         run: npm ci
+
+      - uses: nrwl/nx-set-shas@v4
+
       - name: Build Storybook
         run: npx nx affected -t build-storybook --configuration=ci
+
       - name: Run Chromatic
         env:
           PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-        run: npx nx affected -t chromatic-ci --token="$PROJECT_TOKEN"
+        run: npx nx affected -t chromatic-ci --token=$PROJECT_TOKEN
       # - name: Run Chromatic
       #   uses: chromaui/action@latest
       #   with:
